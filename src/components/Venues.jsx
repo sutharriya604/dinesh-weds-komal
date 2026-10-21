@@ -1,0 +1,2 @@
+import {venues} from "../data/venues.js"; import SectionHeading from "./SectionHeading.jsx"; import VenueCard from "./VenueCard.jsx";
+export default function Venues(){return <section className="section tinted" id="venues"><SectionHeading eyebrow="Find your way" title="Places to" accent="Celebrate" description="We look forward to welcoming you. Tap a map link for directions."/><div className="venues-grid">{venues.map((v,i)=><VenueCard key={v.id} venue={v} index={i}/>)}</div></section>}

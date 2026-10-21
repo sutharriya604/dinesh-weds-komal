@@ -1,0 +1,3 @@
+import {useState} from "react"; import {Menu,X,Heart} from "lucide-react";
+const links=[["Home","#home"],["Events","#events"],["Venues","#venues"],["Families","#family"],["Gallery","#gallery"]];
+export default function Header(){const[open,setOpen]=useState(false);return <header className="header"><a className="brand" href="#home"><Heart size={17}/> Dinesh <i>&</i> Komal</a><button className="menu" onClick={()=>setOpen(!open)} aria-label="Toggle navigation" aria-expanded={open}>{open?<X/>:<Menu/>}</button><nav className={open?"nav nav-open":"nav"}>{links.map(([label,href])=><a key={href} href={href} onClick={()=>setOpen(false)}>{label}</a>)}<a className="nav-date" href="#events" onClick={()=>setOpen(false)}>25.11.2026</a></nav></header>}

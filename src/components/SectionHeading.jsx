@@ -1,0 +1,1 @@
+export default function SectionHeading({eyebrow,title,accent,description}){return <div className="section-heading"><span className="eyebrow">{eyebrow}</span><h2>{title} <em>{accent}</em></h2>{description&&<p>{description}</p>}</div>}

@@ -1,0 +1,3 @@
+import {Heart} from "lucide-react";
+function MemberGroup({title,members}){return <div className="family-group"><h4>{title}</h4>{members.map(m=><div className="family-member" key={m.name}><span>{m.relation}</span><strong>{m.name}</strong></div>)}</div>}
+export default function FamilyCard({family}){return <article className="family-card"><div className="flower">❀</div><small>{family.title}</small><h3>{family.couple}</h3><div className="divider">──── ✦ ────</div><MemberGroup title="Parents" members={family.parents}/><MemberGroup title="Brothers & Sisters" members={family.siblings}/><Heart className="card-heart" size={16}/></article>}
