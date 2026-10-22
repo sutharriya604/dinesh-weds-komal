@@ -117,20 +117,34 @@ button { font: inherit; cursor: pointer; }
 .text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--purple); font-size: 12px; font-weight: 700; }
 
 /* ---------- Families ---------- */
-.family-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 900px; margin: auto; }
-.family-card { position: relative; padding: 27px 28px 24px; border: 1px solid #e5d9ef; border-radius: 18px; background: linear-gradient(150deg, #fff, #fdfaff); text-align: center; overflow: hidden; }
+.family-tabs { display: flex; gap: 6px; width: fit-content; max-width: 100%; margin: 0 auto 38px; padding: 5px; border: 1px solid #e5d9ef; border-radius: 40px; background: #fff; }
+.family-tab { border: 0; background: transparent; padding: 11px 24px; border-radius: 30px; color: #6d6078; font-size: 14px; font-weight: 600; transition: .2s; }
+.family-tab.on { background: var(--dark); color: #fff; }
+.family-side { max-width: 1120px; margin: 0 auto; text-align: center; }
 .flower { color: #b48bd3; font-size: 28px; }
-.family-card > small { color: var(--purple); font-size: 11px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
-.family-card h3 { margin: 10px 0; color: var(--dark); font: 500 29px var(--serif); }
-.divider { color: #ad87cc; font-size: 12px; margin: 15px 0 22px; }
-.family-group { margin-top: 20px; }
-.family-group h4 { margin: 0 0 10px; color: #8466a0; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
-.family-member { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid #f1eaf6; text-align: left; }
-.family-member:last-child { border-bottom: 0; }
-.family-member span { color: #85768f; font-size: 12px; }
-.family-member strong { color: #493657; font-size: 14px; font-weight: 600; text-align: right; }
-.card-heart { margin-top: 15px; color: #b18bd0; }
-.blessing { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 30px 0 0; color: #7d6a8b; font: italic 16px var(--serif); text-align: center; }
+.family-side h3 { margin: 6px 0; color: var(--dark); font: 500 clamp(28px, 4vw, 36px) var(--serif); }
+.divider { color: #ad87cc; font-size: 12px; margin: 10px 0 8px; }
+.family-group { margin-top: 38px; }
+.family-group h4 { display: flex; align-items: center; gap: 16px; margin: 0 0 20px; color: #8466a0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.family-group h4:before, .family-group h4:after { content: ""; flex: 1; height: 1px; background: #e5d9ef; }
+.member-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.member { width: 210px; margin: 0; border: 1px solid #e5d9ef; border-radius: 16px; overflow: hidden; background: #fff; transition: .2s; }
+.member:hover { transform: translateY(-3px); box-shadow: 0 18px 50px #42275c14; }
+.member-couple { width: 360px; }
+@media (min-width: 901px) {
+  .one-line { flex-wrap: nowrap; }
+  .one-line .member { flex: 1 1 0; width: auto; max-width: 380px; }
+  .one-line .member-couple { flex-grow: 1.7; }
+}
+.member-photo { height: 262px; background: linear-gradient(145deg, #e6d5f3, #f6effb); }
+.member-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.member-ph { display: grid; place-items: center; height: 100%; color: #b9a0d3; }
+.member-ph svg { width: 56px; height: 56px; stroke-width: 1.4; }
+.member figcaption { padding: 14px 12px 16px; }
+.member strong { display: block; color: var(--dark); font: 500 17px/1.35 var(--serif); }
+.member strong i { color: #b38bd4; font-style: italic; }
+.member small { display: block; margin-top: 5px; color: var(--purple); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.blessing { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 44px 0 0; color: #7d6a8b; font: italic 16px var(--serif); text-align: center; }
 .blessing svg { color: var(--purple); flex-shrink: 0; }
 
 /* ---------- Gallery (auto slider) ---------- */
@@ -191,8 +205,13 @@ button { font: inherit; cursor: pointer; }
   .venue-card { grid-template-columns: 78px 1fr; gap: 13px; padding-right: 13px; }
   .venue-card > div:last-child { padding: 18px 0; }
   .venue-card h3 { font-size: 19px; }
-  .family-grid { grid-template-columns: 1fr; max-width: 480px; }
-  .family-card { padding: 25px 20px; }
+  .family-tab { padding: 10px 16px; font-size: 13px; }
+  .member-list { gap: 12px; }
+  .member { width: calc(50% - 6px); }
+  .member-couple { width: 100%; }
+  .member-photo { height: 210px; }
+  .member-couple .member-photo { height: 240px; }
+  .member strong { font-size: 15px; }
   .slider { --img-h: min(52vh, 400px); border-radius: 14px; }
   .slider-btn { width: 38px; height: 38px; top: calc(var(--img-h) / 2 - 19px); }
   .slide-caption { font-size: 16px; padding: 14px 18px 36px; }
