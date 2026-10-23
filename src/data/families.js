@@ -19,15 +19,16 @@ export const families = [
     couple: "Dinesh Suthar",
     groups: [
       {
-        title: "Parents",
+        title: "Grand Parents",
         members: [
-          { names: ["Naresh Kumar", "Pushpa Devi"], relation: "Father & Mother", photo: "/photos/family/groom-parents.jpeg" },
+          { names: ["Kapoor ji Suthar", "Daku Devi"], relation: "Dada & Dadi", photo: "/photos/family/Dada-dadi.jpeg" },
         ],
       },
       {
-        title: "Uncles & Aunts",
+        title: " Parents & Uncles & Aunts",
         oneLine: true, // teeno ek hi line me
         members: [
+           { names: ["Naresh Kumar", "Pushpa Devi"], relation: "Father & Mother", photo: "/photos/family/groom-parents.jpeg" },
           { names: ["Sohanlal Suthar", "Manju Devi"], relation: "Bade Papa & Badi Mammi", photo: "/photos/family/SS.jpeg" },
           { names: ["Ramesh Suthar", "Indra Devi"], relation: "Uncle & Aunty", photo: "/photos/family/RK.jpeg" },
           { names: ["Sharavan Suthar", "Tara Devi"], relation: "Uncle & Aunty", photo: "/photos/family/SK.jpeg" },
