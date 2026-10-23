@@ -39,8 +39,8 @@ export const families = [
         members: [
           { names: ["Yash Suthar"], relation: "Brother", photo: "/photos/family/Yash.jpg" },
           // Dono behno ki shaadi ho chuki hai -> couple card
-          { names: ["Heena Suthar", "Husband Name"], relation: "Sister & Jijaji", photo: "/photos/family/groom-heena.jpeg" },
-          { names: ["Priyanka Suthar", "Husband Name"], relation: "Sister & Jijaji", photo: "/photos/family/groom-priyanka.jpeg" },
+          { names: ["Heena Suthar","Vinod ji"], relation: "Sister & Jijaji", photo: "/photos/family/groom-heena.jpeg" },
+          { names: ["Priyanka Suthar", "Bhavesh ji"], relation: "Sister & Jijaji", photo: "/photos/family/groom-priyanka.jpeg" },
         ],
       },
       {
